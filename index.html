@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CURDS</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body id="body">
+    <div class="curds">
+        <h3>PRODUCT OF CURDS</h3>
+        <div class="inputs">
+            <input type="text" id="title" placeholder="Title">
+            <div class="prices">
+                <input oninput="totalPrice()" type="text" id="price" placeholder="price">
+                <input oninput="totalPrice()" type="text" id="ads" placeholder="ads">
+                <input oninput="totalPrice()" type="text" id="taxis" placeholder="taxis">
+                <input oninput="totalPrice()" type="text" id="discount" placeholder="discount">
+                <p class="total" id="total"></p>
+            </div>
+            <input type="text" id="count" placeholder="count">
+            <input type="text" id="catogery" placeholder="catogery">
+            <button class="create" id="create" type="submit">Create</button>
+            <div class="search">
+                <input oninput="searchData(this.value)" id="search" type="search" placeholder="Search">
+                <div class="btnsSearch">
+                    <button onclick="getsearch(this.id)" id="searchTitle" type="submit">Search By Title</button>
+                    <button onclick="getsearch(this.id)" id="searchCatogery" type="submit">Search By Catogery</button>
+                </div>
+            </div>
+            <button class="btnDelete" id="btnDelete" type="submit">Delete All ( <span id="numProduct"></span> )</button>
+        </div>
+        <table>
+            <tr>
+                <th class="number">id</th>
+                <th>title</th>
+                <th>price</th>
+                <th>ads</th>
+                <th>taxis</th>
+                <th>discount</th>
+                <th>total</th>
+                <th>catogery</th>
+                <th>update</th>
+                <th>delete</th>
+            </tr>
+            <tbody id="tbody">
+            </tbody>
+        </table>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>
